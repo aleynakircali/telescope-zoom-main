@@ -1,0 +1,103 @@
+body {
+  background: #f4f0ea;
+  color: #171717;
+}
+
+.computation-page {
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+.computation-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.computation-header a {
+  color: #171717;
+  font-weight: 400;
+}
+
+.computation-intro {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: end;
+  min-height: 62vh;
+  gap: 2rem;
+}
+
+.eyebrow {
+  align-self: start;
+  margin-top: 12vh;
+  color: #ec008c;
+}
+
+.computation-intro h1 {
+  font-size: clamp(4rem, 10vw, 12rem);
+  font-weight: 300;
+  line-height: 0.85;
+}
+
+.intro-copy {
+  max-width: 18rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.computation-projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  border-top: 1px solid currentColor;
+}
+
+.computation-projects article {
+  min-height: 16rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid currentColor;
+}
+
+.computation-projects article + article {
+  padding-left: 1rem;
+  border-left: 1px solid currentColor;
+}
+
+.computation-projects h2 {
+  margin-top: 5rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.computation-projects p {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .computation-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    min-height: 70vh;
+    gap: 2rem;
+  }
+
+  .eyebrow {
+    margin-top: 8vh;
+  }
+
+  .computation-intro h1 {
+    font-size: 20vw;
+  }
+
+  .computation-projects {
+    grid-template-columns: 1fr;
+  }
+
+  .computation-projects article + article {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
